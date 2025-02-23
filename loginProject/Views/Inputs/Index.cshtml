@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="alert alert-success" role="alert">
+    Your request has been submitted successfully!
+</div>
+<p>@TempData["Success"]</p>
+
+
+<a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-primary">
+    <i class="bi bi-house-door-fill"></i> Go to Home
+</a>

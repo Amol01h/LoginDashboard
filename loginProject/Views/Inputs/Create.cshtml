@@ -1,0 +1,45 @@
+﻿
+
+@* <form action="Create" method="post"> *@
+@*     <div> *@
+@*         <label>Name :</label> *@
+@*         <input type="text" name="Name" required /> *@
+@*     </div> *@
+@*     <div> *@
+@*         <label>JobDescription :</label> *@
+@*         <input type="text" name="JobDescription" required /> *@
+@*     </div> *@
+@*     <div> *@
+@*         <label>Salary :</label> *@
+@*         <input type="text" name="Salary" required /> *@
+@*     </div> *@
+@*    <input type="Submit" name="name" value="Submit" >Submit</input> *@
+@* </form> *@
+<body class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow mt-5">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4 text-primary">Create New Record</h3>
+                        <form action="Create" method="post">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" name="Name" placeholder="Name" required>
+                                <label for="name" class="text-secondary">Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="jobDescription" name="JobDescription" placeholder="Job Description" required>
+                                <label for="jobDescription" class="text-secondary">Job Description</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <input type="text" class="form-control" id="salary" name="Salary" placeholder="Salary" required>
+                                <label for="salary" class="text-secondary">Salary</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 text-white">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

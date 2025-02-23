@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Welcome to Dashboard!</h2>
+
+@if (TempData["Success"] != null)
+{
+    <p>@TempData["Success"]</p>
+}
+
+<h3>IT Employees</h3>
+
+<table class="table table-hover table-striped table-bordered text-center">
+    <thead class="table-primary">
+        <tr>
+            <th class="text-dark">Name</th>
+            <th class="text-dark">Job Description</th>
+            <th class="text-dark">Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewBag.ITEmployees != null && ViewBag.ITEmployees.Count > 0)
+        {
+            foreach (var employee in ViewBag.ITEmployees)
+            {
+                <tr>
+                    <td class="text-success">@employee.Name</td>
+                    <td class="text-info">@employee.JobDescription</td>
+                    <td class="text-danger">@employee.Salary</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3" class="text-warning">No IT Employees Found</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
